@@ -1,0 +1,14 @@
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/22/24.yaml
+
+packages:
+- .
+
+extra-deps:
+- git: git@github.com:fmidue/IOTasks.git
+  commit: 8d059304110f112a2f7e42285825785552ad8e71
+
+- git: https://github.com/owestphal/type-match
+  commit: 744797d33f85daa1d78181e2c512052903352dcc
+- git: https://github.com/IagoAbal/haskell-z3
+  commit: 6368e451e45359563106da7e917f6594453c5161

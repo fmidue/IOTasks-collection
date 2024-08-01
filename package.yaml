@@ -1,0 +1,33 @@
+name:                IOTasks-collection
+version:             0.1.0.0
+github:              "fmidue/IOTasks-collection"
+license:             BSD-3-Clause
+author:              "Oliver Westphal"
+maintainer:          "oliver.westphal@uni-due.com"
+copyright:           "2024 Oliver Westphal"
+
+description:         Please see the README on GitHub at <https://github.com/fmidue/IOTasks-collection#readme>
+
+extra-source-files:
+- README.md
+
+dependencies:
+- base >= 4.7 && < 5
+- IOTasks
+- QuickCheck
+- time
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+- -fdefer-typed-holes
+
+library:
+  source-dirs: src
