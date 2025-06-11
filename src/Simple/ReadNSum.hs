@@ -23,7 +23,7 @@ import Test.IOTasks
 basic :: Specification
 basic =
   readInput n pos AssumeValid <>
-  whileNot (currentValue n .==. length' (as @[Integer] $ allValues x))
+  whileNot (currentValue n .==. length' (allValues x))
     (readInput x ints AssumeValid)
   <>
   writeOutput [wildcard <> resultOf (sum' (allValues x)) <> wildcard]
@@ -46,7 +46,7 @@ prog = do
 product :: Specification
 product =
   readInput n pos AssumeValid <>
-  whileNot (currentValue n .==. length' (as @[Integer] $ allValues x))
+  whileNot (currentValue n .==. length' (allValues x))
     (readInput x ints AssumeValid)
   <>
   writeOutput [wildcard <> resultOf (product' (allValues x)) <> wildcard]
@@ -58,8 +58,8 @@ extraOutputs :: Specification
 extraOutputs =
   anyOptionalOutput <>
   readInput n pos AssumeValid <>
-  whileNot (currentValue n .==. length' (as @[Integer] $ allValues x))
-    ( writeOutput [wildcard <> resultOf (intLit 1 .+. length' (as @[Integer] $ allValues x)) <> wildcard] <>
+  whileNot (currentValue n .==. length' (allValues x))
+    ( writeOutput [wildcard <> resultOf (intLit 1 .+. length' (allValues x)) <> wildcard] <>
       readInput x ints AssumeValid
     )
   <>

@@ -52,7 +52,7 @@ tictactwoSpec =
     o = intVar "O"
     wins = [ (x,y,z) | x <- [1..9], y <- [x+1..9], z <- [y+1..9], x+y+z == 15]
     winCond p = foldr (((.||.)) . (\(x,y,z) -> (intLit x `isIn` allValues p) .&&. (intLit y `isIn` allValues p) .&&. (intLit z `isIn` allValues p))) false wins
-    draw = length' (as @[Integer] $ allValues [x,o]) .==. intLit 9
+    draw = length' (allValues $ merge [x,o]) .==. intLit 9
 
     legalMoveX =
       writeOutput [text "X to move:"] <> readInput x (unique $ fromList [1..9] `notInVar` o) UntilValid

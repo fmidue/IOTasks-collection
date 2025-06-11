@@ -31,7 +31,7 @@ specification x =
       )
   ) <>
   writeOutput [text "Correct, you found the number!"] <>
-  writeOutput [wildcard <> resultOf (length' $ as @[Integer] $ allValues guess) <> wildcard]
+  writeOutput [wildcard <> resultOf (length' $ allValues guess) <> wildcard]
   where
     guess = intVar "guess"
 

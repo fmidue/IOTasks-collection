@@ -53,7 +53,7 @@ specification (valuesForX, modeForX) (valuesForY, modeForY) =
         writeOutput [wildcard <> resultOf (currentValue x .+. currentValue y)]
       )
   ) <>
-  writeOutput [wildcard <> resultOf (length' $ as @[Integer] $ allValues y) <> wildcard]
+  writeOutput [wildcard <> resultOf (length' $ allValues y) <> wildcard]
   where
     x, y :: Var Integer
     x = intVar "x"

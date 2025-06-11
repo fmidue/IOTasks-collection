@@ -21,7 +21,7 @@ basic :: Specification
 basic =
   writeOutput [text "What is your name?"] <>
   readInput name str AssumeValid <>
-  writeOutput [text "Hello, " <> resultOf (as @String $ currentValue name) <> text "!"]
+  writeOutput [text "Hello, " <> resultOf (currentValue name) <> text "!"]
   where
     name = stringVar "name"
 
